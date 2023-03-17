@@ -5,7 +5,7 @@ import Charts from "../components/charts";
 
 const Home = () => {
   return (
-    <div>
+    <div className="general">
       <div className="navbar">
         <Navbar />
       </div>
