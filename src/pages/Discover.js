@@ -5,7 +5,7 @@ import { useGetSongsByGenreQuery } from "../redux/services/shazamCore";
 import { selectGenreListId } from "../redux/features/playerSlice";
 import { genres } from "../assets/constants";
 
-const Main = () => {
+const Discover = () => {
   const dispatch = useDispatch();
   const { genreListId } = useSelector((state) => state.player);
   const { data } = useGetSongsByGenreQuery(genreListId || "POP");
@@ -34,4 +34,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Discover;

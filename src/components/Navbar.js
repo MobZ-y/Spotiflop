@@ -2,15 +2,15 @@ import React from "react";
 
 const navbar = () => {
   return (
-    <div>
-      <nav>
+    <div className="sidebar-content">
+      <div className="sidebar-img">
+        <img src="/src/assets/img/logo-spotify-icon-4096.webp" alt="" />
+      </div>
+      <div className="sidebar-text">
         <ul>
-          <li>dzdzhktdc</li>
-          <li>dzdzhktdc</li>
-          <li>dzdzhktdc</li>
-          <li>dzdzhktdc</li>v
+          <li>Discovery</li>
         </ul>
-      </nav>
+      </div>
     </div>
   );
 };
