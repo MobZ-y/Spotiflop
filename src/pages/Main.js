@@ -11,7 +11,7 @@ const Main = () => {
   const { data } = useGetSongsByGenreQuery(genreListId || "POP");
   console.log(data);
   return (
-    <div>
+    <div className="main-first">
       <select
         onChange={(e) => dispatch(selectGenreListId(e.target.value))}
         value={genreListId || "pop"}
@@ -23,10 +23,12 @@ const Main = () => {
           </option>
         ))}
       </select>
-      <div className="flex">
-        {data?.map((info) => (
-          <SongCard data={info} key={info.key} />
-        ))}
+      <div className="main-scroll">
+        <div className="flex">
+          {data?.map((info) => (
+            <SongCard data={info} key={info.key} />
+          ))}
+        </div>
       </div>
     </div>
   );
