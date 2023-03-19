@@ -25,8 +25,8 @@ const Discover = () => {
       </select>
       <div className="main-scroll">
         <div className="flex">
-          {data?.map((info) => (
-            <SongCard data={info} key={info.key} />
+          {data?.map((song) => (
+            <SongCard song={song} key={song.key} />
           ))}
         </div>
       </div>

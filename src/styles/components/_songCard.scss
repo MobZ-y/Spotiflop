@@ -4,14 +4,24 @@
   border-radius: 15px;
   background-color: rgb(65, 65, 65);
   color: white;
+
   .card-img {
     height: 14rem;
     width: 14rem;
+    position: relative;
 
     img {
       height: 100%;
       width: 100%;
       border-radius: 15px;
+    }
+
+    .btn {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: rgb(255, 0, 0);
     }
   }
 
