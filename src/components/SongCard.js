@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { playPause, setActiveSong } from "../redux/features/playerSlice";
+import PlayPause from "./PlayPause";
 
 const SongCard = ({ song, isPlaying, activeSong, data, i }) => {
   const dispatch = useDispatch();
@@ -20,7 +21,7 @@ const SongCard = ({ song, isPlaying, activeSong, data, i }) => {
       <div className="card-img">
         <img alt="song_img" src={song.images?.coverart} />
         <div className="btn">
-          <button
+          <PlayPause
             isPlaying={isPlaying}
             activeSong={activeSong}
             song={song}
