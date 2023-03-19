@@ -7,16 +7,14 @@ import { genres } from "../assets/constants";
 
 const Discover = () => {
   const { genreListId } = useSelector((state) => state.player);
-
   const [data, setData] = useState([]);
   const dispatch = useDispatch();
-
-  const [genre, setGenre] = useState("POP");
+  const { activeSong, isPlaying } = useSelector((state) => state.player);
 
   useEffect(() => {
     axios
       .get(
-        `https://shazam-core.p.rapidapi.com/v1/charts/genre-world?genre_code=${genre}`,
+        `https://shazam-core.p.rapidapi.com/v1/charts/genre-world?genre_code=${genreListId}`,
         {
           headers: {
             "x-rapidapi-host": "shazam-core.p.rapidapi.com",
@@ -26,13 +24,15 @@ const Discover = () => {
         }
       )
       .then((res) => setData(res.data));
-  }, [genre]);
+  }, [genreListId]);
+
+  console.log(data);
 
   return (
     <div className="main-first">
       <select
-        onChange={(e) => setGenre(e.target.value)}
-        value={genre}
+        onChange={(e) => dispatch(selectGenreListId(e.target.value))}
+        value={genreListId || "pop"}
         className="bg-black text-gray-300 p-3 text-sm rounded-lg outline-none sm:mt-0 mt-5"
       >
         {genres.map((genre) => (
@@ -43,8 +43,15 @@ const Discover = () => {
       </select>
       <div className="main-scroll">
         <div className="flex">
-          {data?.map((song) => (
-            <SongCard song={song} key={song.key} />
+          {data?.map((song, i) => (
+            <SongCard
+              song={song}
+              key={song.key}
+              isPlaying={isPlaying}
+              activeSong={activeSong}
+              data={data}
+              i={i}
+            />
           ))}
         </div>
       </div>
