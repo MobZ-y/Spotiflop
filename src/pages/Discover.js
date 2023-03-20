@@ -29,11 +29,11 @@ const Discover = () => {
   console.log(data);
 
   return (
-    <div className="main-first">
+    <div className="discovery">
       <select
         onChange={(e) => dispatch(selectGenreListId(e.target.value))}
         value={genreListId || "pop"}
-        className="bg-black text-gray-300 p-3 text-sm rounded-lg outline-none sm:mt-0 mt-5"
+        className=""
       >
         {genres.map((genre) => (
           <option key={genre.value} value={genre.value}>
@@ -41,8 +41,8 @@ const Discover = () => {
           </option>
         ))}
       </select>
-      <div className="main-scroll">
-        <div className="flex">
+      <div className="discovery-scroll">
+        <div className="discovery-scroll-flex">
           {data?.map((song, i) => (
             <SongCard
               song={song}
