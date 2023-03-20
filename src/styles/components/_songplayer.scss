@@ -1,0 +1,54 @@
+.index {
+  position: relative;
+  padding-left: 3rem;
+  width: 100%;
+  padding-right: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .index-container {
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.song-display {
+  position: fixed;
+  height: 100px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: grey;
+  display: flex;
+}
+//********************seekbar********//
+.seekbar {
+  flex-direction: row;
+  align-items: center;
+
+  .seekbar-btn {
+    display: none;
+  }
+}
+
+//****************track**************//
+.track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .track-img {
+    height: 84px;
+    width: 84px;
+
+    img {
+      border-radius: 150px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
