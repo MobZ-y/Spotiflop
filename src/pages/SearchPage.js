@@ -19,17 +19,18 @@ const SearchPage = () => {
           },
         }
       )
-      .then((res) => setData(res.data.tracks.hits));
+      .then((res) => setData(res.data));
   }, [search]);
 
-  console.log(data);
+  const songs = data?.tracks?.hits.map((song) => song.track);
+
   return (
     <div>
       <div className="discovery">
         <p>dqd</p>
         <div className="discovery-scroll">
           <div className="discovery-scroll-flex">
-            {data?.map((song, i) => (
+            {songs?.map((song, i) => (
               <SongCard song={song} key={song.key} data={data} i={i} />
             ))}
           </div>
