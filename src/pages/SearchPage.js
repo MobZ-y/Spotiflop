@@ -27,7 +27,6 @@ const SearchPage = () => {
   return (
     <div>
       <div className="discovery">
-        <p>dqd</p>
         <div className="discovery-scroll">
           <div className="discovery-scroll-flex">
             {songs?.map((song, i) => (
