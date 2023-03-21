@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-
+import Search from "../components/Search";
 import Discover from "./Discover";
 
 const Home = () => {
@@ -10,6 +10,7 @@ const Home = () => {
         <Navbar />
       </div>
       <div className="main">
+        <Search />
         <Discover />
       </div>
     </div>

@@ -32,17 +32,7 @@ const SongCard = ({ song, isPlaying, activeSong, data, i }) => {
       </div>
       <div className="card-content">
         <p className="title">{song.title}</p>
-        <p>
-          <Link
-            to={
-              song.artists
-                ? `/artists/${song?.artists[0]?.adamid}`
-                : "/top-artists"
-            }
-          >
-            {song.subtitle}
-          </Link>
-        </p>
+        <p className="subtitle">{song.subtitle}</p>
       </div>
     </div>
   );

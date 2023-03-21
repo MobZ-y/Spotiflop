@@ -27,12 +27,15 @@
 
   .title {
     display: flex;
-    justify-content: center;
     padding-top: 10px;
     font-size: 1.125rem;
     width: 14rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+
+  .subtitle {
+    color: #000;
   }
 }

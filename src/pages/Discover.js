@@ -26,8 +26,6 @@ const Discover = () => {
       .then((res) => setData(res.data));
   }, [genreListId]);
 
-  console.log(data);
-
   return (
     <div className="discovery">
       <select
