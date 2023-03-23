@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const navbar = () => {
   return (
@@ -23,7 +24,9 @@ const navbar = () => {
             </svg>
           </div>
           <div className="sidebar-text-discovery-title">
-            <h3>Découverte</h3>
+            <NavLink to="/">
+              <h3>Découverte</h3>
+            </NavLink>
           </div>
         </div>
       </div>
