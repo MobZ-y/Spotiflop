@@ -12,21 +12,21 @@ function App() {
   return (
     <BrowserRouter>
       <div className="general">
-        <div className="sidebar">
-          <Navbar />
+        <Navbar />
+        <div className="search-part">
           <Search />
-        </div>
-        <div className="main">
-          <Routes>
-            <Route path="/" element={<Discover />} />
-            <Route path="/search/:search" element={<SearchPage />} />
-          </Routes>
+          <div className="main">
+            <Routes>
+              <Route path="/" element={<Discover />} />
+              <Route path="/search/:search" element={<SearchPage />} />
+            </Routes>
 
-          {activeSong?.title && (
-            <div className="song-display">
-              <SongPlayer />
-            </div>
-          )}
+            {activeSong?.title && (
+              <div className="song-display">
+                <SongPlayer />
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </BrowserRouter>
