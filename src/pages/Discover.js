@@ -39,19 +39,17 @@ const Discover = () => {
           </option>
         ))}
       </select>
-      <div className="discovery-scroll">
-        <div className="discovery-scroll-flex">
-          {data?.map((song, i) => (
-            <SongCard
-              song={song}
-              key={song.key}
-              isPlaying={isPlaying}
-              activeSong={activeSong}
-              data={data}
-              i={i}
-            />
-          ))}
-        </div>
+      <div className="discovery-flex">
+        {data?.map((song, i) => (
+          <SongCard
+            song={song}
+            key={song.key}
+            isPlaying={isPlaying}
+            activeSong={activeSong}
+            data={data}
+            i={i}
+          />
+        ))}
       </div>
     </div>
   );

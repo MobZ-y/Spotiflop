@@ -15,17 +15,19 @@ function App() {
         <Navbar />
         <div className="search-part">
           <Search />
-          <div className="main">
-            <Routes>
-              <Route path="/" element={<Discover />} />
-              <Route path="/search/:search" element={<SearchPage />} />
-            </Routes>
+          <div className="main-part">
+            <div className="main-scroll">
+              <Routes>
+                <Route path="/" element={<Discover />} />
+                <Route path="/search/:search" element={<SearchPage />} />
+              </Routes>
 
-            {activeSong?.title && (
-              <div className="song-display">
-                <SongPlayer />
-              </div>
-            )}
+              {activeSong?.title && (
+                <div className="song-display">
+                  <SongPlayer />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

@@ -5,22 +5,9 @@
   flex-direction: column;
 }
 
-.discovery-scroll {
+.discovery-flex {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  box-sizing: border-box;
-  padding: 10px;
-  overflow-y: scroll;
-
-  .discovery-scroll-flex {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 440px;
-  }
+  flex-wrap: wrap;
 }
 
 ::-webkit-scrollbar {

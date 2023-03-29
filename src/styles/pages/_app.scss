@@ -1,0 +1,27 @@
+.general {
+  display: flex;
+  position: relative;
+
+  .search-part {
+    flex: 1 1 0%;
+    flex-direction: column;
+    display: flex;
+  }
+
+  .main-part {
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+    height: calc(100vh - 72px);
+    padding: 10px;
+    overflow-y: scroll;
+
+    .main-scroll {
+      display: flex;
+      flex-wrap: wrap;
+      height: fit-content;
+      padding-bottom: 60px;
+      padding-top: 160px;
+    }
+  }
+}
