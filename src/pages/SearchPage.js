@@ -27,12 +27,10 @@ const SearchPage = () => {
   return (
     <div>
       <div className="discovery">
-        <div className="discovery-scroll">
-          <div className="discovery-scroll-flex">
-            {songs?.map((song, i) => (
-              <SongCard song={song} key={song.key} data={data} i={i} />
-            ))}
-          </div>
+        <div className="discovery-flex">
+          {songs?.map((song, i) => (
+            <SongCard song={song} key={song.key} data={data} i={i} />
+          ))}
         </div>
       </div>
     </div>

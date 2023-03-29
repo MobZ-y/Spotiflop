@@ -10,7 +10,7 @@
 
   .main-part {
     align-items: center;
-    margin-top: 50px;
+    margin-top: 20px;
     width: 100%;
     height: calc(100vh - 72px);
     padding: 10px;
@@ -20,8 +20,6 @@
       display: flex;
       flex-wrap: wrap;
       height: fit-content;
-      padding-bottom: 60px;
-      padding-top: 160px;
     }
   }
 }
