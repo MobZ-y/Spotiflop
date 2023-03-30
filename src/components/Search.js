@@ -12,12 +12,8 @@ const Search = () => {
   };
   return (
     <div>
-      <form
-        onSubmit={handleSubmit}
-        autoComplete="off"
-        className=""
-      >
-        <div className="flex flex-row justify-start items-center">
+      <form onSubmit={handleSubmit} autoComplete="off" className="">
+        <div className="">
           <input
             name="search-field"
             autoComplete="off"
