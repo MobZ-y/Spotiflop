@@ -13,12 +13,13 @@ const Search = () => {
   return (
     <div>
       <form onSubmit={handleSubmit} autoComplete="off" className="">
-        <div className="">
+        <div className="search">
           <input
             name="search-field"
             autoComplete="off"
             placeholder="Search"
             type="search"
+            id="search-bar"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
